@@ -28,4 +28,6 @@ int main() {
     std::cout << "Discount: $" << discount << "\n";
     std::cout << "Shipping: $" << shipping << "\n";
     std::cout << "Grand Total: $" << (afterDiscount + shipping) << "\n";
+
+    return 0;
 }

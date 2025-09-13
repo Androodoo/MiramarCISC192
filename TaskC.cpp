@@ -30,4 +30,5 @@ int main()
     cout << fixed << setprecision(2) << "Benefits: $" << benefitsFee << endl;
     cout << fixed << setprecision(2) << "Net: $" << net << endl;
     
+    return 0;
 }
