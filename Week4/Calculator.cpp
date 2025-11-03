@@ -20,7 +20,7 @@ double number{};
 cout << "Enter a value ";
 if(!(cin >> number)){
     cerr << "Not a valid number. " << endl;
-    return 1;
+    return 1; //1 for invalid input
 }
 double secondNumber{};
 cout << number << " added, subtracted, multiplied, or divided by (input second number here): ";
@@ -50,7 +50,7 @@ switch(static_cast<Operation>(mathOperator)){
     case Operation::Divide:
         if(secondNumber == 0){
             cerr << "Dividing by zero; Error." << endl;
-            return 2; //2 for diving by 0 error
+            return 2; //2 for dividing by 0 error
         }
         else{cout << number << " / " << secondNumber << " = " << (number / secondNumber);}
             break;
