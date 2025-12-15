@@ -20,6 +20,7 @@ PART DDDDDDD
     The smart pointer method is the safest because it is automatic with deleting memory and prevents data leaks, and it has super clear ownerships with so no double deletes
 
 UML DIAGRAMS
+
     PartC
     - tasks: std::unique_ptr<Task[]>
     - size: int
