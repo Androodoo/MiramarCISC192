@@ -19,8 +19,32 @@ PART DDDDDDD
 4. Which ptr method is safest and why
     The smart pointer method is the safest because it is automatic with deleting memory and prevents data leaks, and it has super clear ownerships with so no double deletes
 
+UML DIAGRAMS
+    PartC
+    - tasks: std::unique_ptr<Task[]>
+    - size: int
+    - capacity: int
+    --------------------------------
+    + PartC(initialCapacity: int)
+    + addTask(desc: const std::string&): void
+    + removeTask(id: int): void
+    + listTasks(): void
+
+    Task
+    - id: int
+    - description: string
+    - completed: bool
+    --------------------------------
+    + Task()
+    + Task(id: int, descL const std::string)
+    + markCompleted(): void
+    + isCompleted(): bool
+    + getId(): int
+    + getDescription(): string
+
 Notes
 Okay this project was actually really fun
 I could not run the code due to the CMake files from the previous lab, so to run it, I entered g++ main.cpp task.cpp -o main, and .\main
 I tried making multiple header files for the parts but I couldnt do it </3
+    I think that I should have just done PartA.cpp, PartA.h, and so on, so that I could have multiple mains. but now it is a little too late to do it lol.
 This project taught me a lot about pointers, I never even knew that they existed
